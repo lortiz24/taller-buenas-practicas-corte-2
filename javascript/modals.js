@@ -1,14 +1,7 @@
-const openModalButton = document.getElementById("openModal");
+const openModalButton = document.getElementById("openOne");
 openModalButton.addEventListener("click", () => {
-  const modalContent = document.createElement("div");
-  modalContent.innerHTML = `
-      <div class="modal">
-        <div class="modal-content">
-          <h2>Contenido del modal</h2>
-          <p>Más información sobre la serie de anime Shingeki no Kyojin.</p>
-          <button id="closeModal">Cerrar</button>
-        </div>
-      </div>
-    `;
+  const modalContent = document.getElementById("modal-one-pice");
+  console.log('modalContent',modalContent)
+  modalContent.classList.add("show");
   document.body.appendChild(modalContent);
 });
